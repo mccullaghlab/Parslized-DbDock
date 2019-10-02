@@ -20,7 +20,7 @@ mcullaghcluster = Config(
                     hostname='login1.rc.colostate.edu',
                     username='kavotaw',     # Please replace USERNAME with your username
                     script_dir='/home/kavotaw/lustrefs/z15-adfr/adfr_parsl_efficiency_test/',
-		    password='hsxAyFJGn7DO6Cz'
+		    password='' # Password goes here (or use keys)
                 ),
                 launcher=SrunLauncher(),
 		scheduler_options="""#SBATCH --ntasks-per-node=20
