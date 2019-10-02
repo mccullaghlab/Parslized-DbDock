@@ -79,7 +79,7 @@ def getAllFeatures(inputs=[names,ligands],outputs=[features_bin_dir]):
     features = preprocessing.normalize(features,norm='l2',axis=0)
     allValidFeatures = [names, [features]]
     np.save("{}".format(features_bin_dir),allValidFeatures)
-return names, features
+    return names, features
 
 @python_app
 def train_and_test_svm_and_nn(inputs=[ligand_file, label_file], outputs=[svm_model, r2_svm, nn_model, r2_nn, features_plus_energies]):
@@ -129,4 +129,4 @@ def train_and_test_svm_and_nn(inputs=[ligand_file, label_file], outputs=[svm_mod
      plt.savefig('svm-nn_rigid.png',dpi=600,transparent='True')
      plt.close()       
                                  	
-return svm_model, r2_svm, nn_model, r2_nn
+     return svm_model, r2_svm, nn_model, r2_nn
